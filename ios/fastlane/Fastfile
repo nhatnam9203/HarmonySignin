@@ -1,0 +1,30 @@
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :custom_lane do
+    # add actions here: https://docs.fastlane.tools/actions
+  end
+lane :beta do
+    build_app(
+       export_method: "ad-hoc",
+      scheme: "HpSignIn",
+      workspace:"HpSignIn.xcworkspace",
+      clean: false,
+      include_bitcode: true,
+      export_options: {
+        provisioningProfiles: { 
+          "com.app.signinapp" => "HpSignInApp2"
+        }
+      }
+    )
+    crashlytics(
+      api_token: "582badab6e2cf0963d3d0884b982158b347816d6",
+    build_secret: "08c92895dd73ddd1535a5d48e8935926f243f05fa432ad6fb0f66e4290ee964f",
+      notifications: "true"
+    )
+  end
+end

@@ -1,32 +1,40 @@
 import { takeLatest, all } from 'redux-saga/effects'
-import API from '../Services/Api'
-import FixtureAPI from '../Services/FixtureApi'
-import DebugConfig from '../Config/DebugConfig'
+import {
+  LoginSaga,
+  GetAppointmentByStatusSaga,
+  searchByPhoneSaga,
+  addNewUserSaga,
+  ForgotPasswordSaga,
+  GetServiceSaga,
+  GetProductSaga,
+  GetExtraSaga,
+  getCateggorySaga,
+  GetServiceByCategoryIdSaga,
+  addAppointmentSaga,
+  CancelAppointmentSaga,
+  logoutSaga,
+  getWaitingTimeSaga
+} from './Saga'
+import {SigninTypes} from '../Redux/SignIn/SignInRedux'
 
-/* ------------- Types ------------- */
 
-import { StartupTypes } from '../Redux/StartupRedux'
-import { GithubTypes } from '../Redux/GithubRedux'
-
-/* ------------- Sagas ------------- */
-
-import { startup } from './StartupSagas'
-import { getUserAvatar } from './GithubSagas'
-
-/* ------------- API ------------- */
-
-// The API we use is only used from Sagas, so we create it here and pass along
-// to the sagas which need it.
-const api = DebugConfig.useFixtures ? FixtureAPI : API.create()
-
-/* ------------- Connect Types To Sagas ------------- */
 
 export default function * root () {
   yield all([
-    // some sagas only receive an action
-    takeLatest(StartupTypes.STARTUP, startup),
-
-    // some sagas receive extra parameters in addition to an action
-    takeLatest(GithubTypes.USER_REQUEST, getUserAvatar, api)
+    takeLatest(SigninTypes.LOGIN_REQUEST,LoginSaga),
+    takeLatest(SigninTypes.GET_WAITING_LIST,GetAppointmentByStatusSaga),
+    takeLatest(SigninTypes.SEARCH_BY_PHONE,searchByPhoneSaga),
+    takeLatest(SigninTypes.ADD_NEW_USER,addNewUserSaga),
+    takeLatest(SigninTypes.FORGOT_PASSWORD,ForgotPasswordSaga),
+    takeLatest(SigninTypes.GET_SERVICE,GetServiceSaga),
+    takeLatest(SigninTypes.GET_PRODUCT,GetProductSaga),
+    takeLatest(SigninTypes.GET_EXTRA,GetExtraSaga),
+    takeLatest(SigninTypes.GET_CATEGORY_BY_MERCHANT,getCateggorySaga),
+    takeLatest(SigninTypes.GET_SERVICE_BY_CATEGORY_ID,GetServiceByCategoryIdSaga),
+    takeLatest(SigninTypes.ADD_APPOINTMENT,addAppointmentSaga),
+    takeLatest(SigninTypes.CANCEL_APPOINTMENT,CancelAppointmentSaga),
+    takeLatest(SigninTypes.LOGOUT,logoutSaga),
+    takeLatest(SigninTypes.GET_WAITING_TIME,getWaitingTimeSaga),
+    // takeLatest(SigninTypes.ADD_APPOINTMENT,addAppointmentSaga),
   ])
 }
