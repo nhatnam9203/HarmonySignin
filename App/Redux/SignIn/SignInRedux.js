@@ -53,6 +53,7 @@ const { Types, Creators } = createActions({
   updateAppointment : ['data'],
   changeSessionExpired : ['data'],
   runSignal : null,
+  sendGiftcard : ['data']
 });
 export const SigninTypes = Types
 export default Creators
@@ -227,7 +228,8 @@ const addService_ToCart = (state, action) => {
 
 const deleteItemInCart = (state, action) => {
   const { data } = action;
-  if (data.serviceId) {
+
+  if (data.serviceId && !data.extraId) {
     const pos = state.Cart.findIndex(item => item.serviceId === data.serviceId);
     if (pos === -1) {
       return {
@@ -386,7 +388,6 @@ changeSessionExpired=(state,action)=>{
 }
 
 getWaitingTimeSuccess=(state,action)=>{
-  console.log(action.data)
   return{
     ...state,
     WaitingTimeMerchant : action.data

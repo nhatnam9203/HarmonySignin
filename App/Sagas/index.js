@@ -13,7 +13,8 @@ import {
   addAppointmentSaga,
   CancelAppointmentSaga,
   logoutSaga,
-  getWaitingTimeSaga
+  getWaitingTimeSaga,
+  SendGiftCardSaga
 } from './Saga'
 import {SigninTypes} from '../Redux/SignIn/SignInRedux'
 
@@ -35,6 +36,7 @@ export default function * root () {
     takeLatest(SigninTypes.CANCEL_APPOINTMENT,CancelAppointmentSaga),
     takeLatest(SigninTypes.LOGOUT,logoutSaga),
     takeLatest(SigninTypes.GET_WAITING_TIME,getWaitingTimeSaga),
+    takeLatest(SigninTypes.SEND_GIFTCARD,SendGiftCardSaga),
     // takeLatest(SigninTypes.ADD_APPOINTMENT,addAppointmentSaga),
   ])
 }

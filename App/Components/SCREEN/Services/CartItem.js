@@ -85,13 +85,13 @@ export default class CartItem extends Component {
     const { Cart } = this.props;
     Cart.forEach(item => {
       if (item.productId || item.extraId) {
-        total += item.price * item.quantity
+        total += parseFloat(item.price) * parseFloat(item.quantity)
       }
       if (item.serviceId || item.extraId) {
-        total += item.price
+        total += parseFloat(item.price)
       }
     });
-    return total.toFixed(2);
+    return parseFloat(total).toFixed(2);
   }
 
   getTotalDuration() {
@@ -139,11 +139,11 @@ export default class CartItem extends Component {
           key={index}>
           <ItemCart.Left>{this.renderImage(item)}</ItemCart.Left>
           <ItemCart.Right>
-            <Text style={styles.titleItem}>{item.name}</Text>
+            <Text numberOfLines={1} ellipsizeMode={'tail'} style={styles.titleItem}>{item.name}</Text>
             <View style={{ display: "flex", flexDirection: "row" }}>
               <Text style={styles.titleTotalWrapper}>Price : </Text>
               <Text style={[styles.titleTotalWrapper, { fontWeight: "600" }]}>
-                $ {Number(item.price).toFixed(2)}
+                $ {parseFloat(item.price).toFixed(2)}
               </Text>
             </View>
             {this.renderBottomItemCart(item)}

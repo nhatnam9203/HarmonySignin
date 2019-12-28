@@ -16,7 +16,8 @@ import {
   GET_CATEGORY_BY_MERCHANT,
   PUT_UPDATE_STATUS_APPOINTMENT,
   PUT_UPDATE_APPOINTMENT,
-  GET_WAITING_TIME
+  GET_WAITING_TIME,
+  GET_SEND_GIFTCARD
 } from '../app-constant'
 import { NavigationActions } from 'react-navigation'
 import axios from 'axios';
@@ -26,6 +27,7 @@ import moment from 'moment';
 const appointmentAdapter = (appointment) => {
   return {
     id: appointment.appointmentId,
+    code : appointment.code,
     userFullName: appointment.firstName + ' ' + appointment.lastName,
     phoneNumber: appointment.phoneNumber,
     services: appointment.services,
@@ -58,6 +60,7 @@ const servicesAdapter = service => {
     discount: service.discount,
     imgService: service.imageUrl,
     description: service.description,
+    extras : service.extras
   };
 };
 const productsAdapter = product => {
@@ -111,7 +114,7 @@ export function* LoginSaga(action) {
   yield put(SigninActions.checkLoginLoading(true));
   const { merchantInfo } = action;
   const { email, password } = merchantInfo;
-  const response = yield axios.post(POST_LOGIN, { email, password }).then((result) => {
+  const response = yield axios.post(POST_LOGIN, { email, password,isSignIn : 1 }).then((result) => {
     return result;
   }).catch((err) => {
     alert(err);
@@ -148,7 +151,8 @@ export function* LoginSaga(action) {
 
 export function* GetAppointmentByStatusSaga() {
   yield put(SigninActions.loadingWaitingList(true));
-  const url = `${GET_APPOINTMENT_BY_STATUS}waiting`;
+  const timeZone = new Date().getTimezoneOffset();
+  const url = `${GET_APPOINTMENT_BY_STATUS}waiting&timezone=${timeZone}`;
   const token = yield AsyncStorage.getItem('token');
   const response = yield CallAPI_GET(url, JSON.parse(token));
   if (response.status === 200) {
@@ -160,6 +164,7 @@ export function* GetAppointmentByStatusSaga() {
     let waitingAppointment = data.codeStatus === 1 ? data.data : [];
     waitingAppointment = waitingAppointment.map(app => appointmentAdapter(app));
     yield put(SigninActions.getWaitingListSuccess(waitingAppointment));
+    yield put(NavigationActions.navigate({ routeName: 'Waiting' }));
   } else {
     yield put(SigninActions.getWaitingListError(response.data))
   }
@@ -222,7 +227,7 @@ export function* addNewUserSaga(action) {
     const userInfo = response.data;
 
     yield put(SigninActions.searchByPhoneSuccess(userInfo.data));
-    yield put(NavigationActions.navigate({ routeName: 'Service' }));
+    yield put(NavigationActions.navigate({ routeName: 'SendGiftCard',params : {phone : Phone} }));
   } else {
     alert('Error !!!')
   }
@@ -263,7 +268,6 @@ export function* getCateggorySaga() {
       yield* checkToken();
       return;
     }
-    console.log(service_by_category)
     const firstIdService = service_by_category.length > 0 ? service_by_category[0].categoryId : '';
 
     yield put(SigninActions.getCategoryByMerchantSuccess(service_by_category));
@@ -378,7 +382,7 @@ export function* addAppointmentSaga(action) {
     customerId : InfoCheckPhone.customerId,
     fromTime: checkTimeToAddAppointmdent(),
     toTime: moment(checkTimeToAddAppointmdent()).add(15, 'minutes').format('YYYY-MM-DD HH:mm'),
-    services: Cart.filter(item => item.serviceId),
+    services: Cart.filter(item => item.serviceId && !item.extraId),
     products: Cart.filter(item => item.productId),
     extras: Cart.filter(item => item.extraId),
   }
@@ -418,13 +422,34 @@ export function* CancelAppointmentSaga(action) {
   }
 }
 
+
+export function* SendGiftCardSaga(action) {
+  yield put(SigninActions.loadingSearchPhone(true));
+  const { phone } = action.data;
+  const token = yield AsyncStorage.getItem('token');
+  const url = `${GET_SEND_GIFTCARD}${phone}`;
+  const response = yield CallAPI_GET(url, JSON.parse(token));
+  if (response.status === 200) {
+    if (response.message === 'Session is expired!') {
+      yield* checkToken();
+      return;
+    }
+    if(response.data.codeStatus === 1){
+      yield put(SigninActions.loadingSearchPhone(false));
+      yield put(NavigationActions.navigate({routeName : 'Service'}));
+      return;
+    }
+  }
+  yield put(SigninActions.loadingSearchPhone(false));
+}
+
 export function* getWaitingTimeSaga() {
   let merchantInfo = yield AsyncStorage.getItem('merchantInfo');
   merchantInfo = JSON.parse(merchantInfo);
   const token = yield AsyncStorage.getItem('token');
-  const url = `${GET_WAITING_TIME}/${merchantInfo.merchantId}?date=${moment().format('YYYY-MM-DD')}`;
+  const timezone = new Date().getTimezoneOffset();
+  const url = `${GET_WAITING_TIME}/${merchantInfo.merchantId}?date=${moment().format('YYYY-MM-DD')}&timezone=${timezone}`;
   const response = yield CallAPI_GET(url, JSON.parse(token));
-  console.log(response);
   if (response.status === 200) {
     if (response.message === 'Session is expired!') {
       yield* checkToken();

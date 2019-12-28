@@ -1,7 +1,7 @@
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import LoginContainer from "../Containers/LoginContainer";
 import Forgot from "../Containers/ForgotPasswordContainer";
-
+import transition from './transition'
 const Nav = createStackNavigator(
   {
     Login: { screen: LoginContainer },
@@ -10,7 +10,8 @@ const Nav = createStackNavigator(
   { 
     initialRouteName: "Login",
     headerMode : 'none',
-    navigationOptions: {}
+    navigationOptions: {},
+    transitionConfig : transition
   }
 );
 

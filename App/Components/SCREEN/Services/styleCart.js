@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
   titleItem: {
     color: "#1266AF",
     fontWeight: "700",
-    fontSize: hp("1.8%")
+    fontSize: hp("1.8%"),
+    width : "90%"
   },
   titleTotalWrapper: {
     color: "#546778",

@@ -8,6 +8,7 @@ import {
   ScrollView
 } from "react-native";
 import Indicator from "../../Indicator";
+import Loading from '../Loading'
 
 import styled from "styled-components/native";
 import {
@@ -17,7 +18,6 @@ import {
 
 import Manicure from "./Manicure";
 import Products from "./Products";
-import Extra from "./Extra";
 import CartItem from "./CartItem";
 
 export default class Index extends Component {
@@ -39,14 +39,12 @@ export default class Index extends Component {
   componentDidMount() {
     const {
       getProduct,
-      getExtra,
       getCategoryByMerchant,
       getWaitingTime,
     } = this.props;
 
     // getProduct();
     getCategoryByMerchant();
-    getExtra();
     getWaitingTime();
   }
 
@@ -76,17 +74,6 @@ export default class Index extends Component {
             extra: false
           },
           selectedState: "Products",
-          serviceIndex: ""
-        });
-        break;
-
-      case "Extra":
-        this.setState({
-          selected: {
-            products: false,
-            extra: true
-          },
-          selectedState: "Extra",
           serviceIndex: ""
         });
         break;
@@ -126,7 +113,7 @@ export default class Index extends Component {
         >
           <TabItem.Text
             active={this.state.serviceIndex === index ? true : false}
-            numberOfLines={1} ellipsizeMode='head'
+            // numberOfLines={1} ellipsizeMode='head'
           >
             {ct.name}
           </TabItem.Text>
@@ -146,12 +133,6 @@ export default class Index extends Component {
         >
           <TabItem.Text active={products ? true : false}>Products</TabItem.Text>
         </TabItem>*/}
-        <TabItem
-          onPress={() => this.switchServices("Extra")}
-          active={extra ? true : false}
-        >
-          <TabItem.Text active={extra ? true : false}>Extra</TabItem.Text>
-        </TabItem> 
         {this.renderCategoryList()}
         </ScrollView>
       </React.Fragment>
@@ -178,6 +159,7 @@ export default class Index extends Component {
         return (
           <Manicure
             addServiceToCart={addServiceToCart}
+            addExtraToCart={addExtraToCart}
             ServiceList={ServiceList}
             scrollToEndCart={()=>this.scrollToEndCart()}
             AnimatedScroll={AnimatedScroll}
@@ -232,7 +214,7 @@ export default class Index extends Component {
     const {isLoadingAddAppointment,isLoadingService} = this.props;
     if(isLoadingAddAppointment || isLoadingService){
       return(
-        <Indicator />
+        <Loading />
       )
     }
     return null;
@@ -250,8 +232,8 @@ export default class Index extends Component {
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: "#F3F6FB" }}>
         <Header>
-          <Header.Text>Services and Products</Header.Text>
-          <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
+          <Header.Text>Services</Header.Text>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('Search')}>
             <Image
               source={require("../../../Images/back-icon.png")}
               style={styles.btnBack}
@@ -347,9 +329,11 @@ Container.Right = styled(Container.Left)`
 
 const TabItem = styled.TouchableOpacity`
   background-color: ${props => (props.active ? "#1366AF" : "transparent")};
-  width : ${wp("15.2%")};
   border-radius: 30px;
   padding : 10px;
+  padding-left : 15px;
+  padding-right : 15px;
+  margin-right : 25px;
 `;
 TabItem.Text = styled.Text`
   color: ${props => (props.active ? "#ffffff" : "#586e82")};

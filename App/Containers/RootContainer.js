@@ -18,7 +18,7 @@ class RootContainer extends Component {
   render () {
     return (
       <SafeAreaView style={{flex : 1}}>
-        {/* <StatusBar barStyle='light-content' /> */}
+        <StatusBar hidden={true} barStyle='light-content' />
         <ReduxNavigation />
       </SafeAreaView>
     )

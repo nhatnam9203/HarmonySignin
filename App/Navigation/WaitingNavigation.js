@@ -5,6 +5,8 @@ import CustomerInfo from "../Containers/CustomerInfoContainer";
 import Services from '../Containers/ServiceContainer'
 import WaitingList from "../Containers/WaitingContainer"
 import ThankYou from "../Containers/ThankYouContainer"
+import SendGiftCard from '../Components/SCREEN/SendGiftCard'
+import transition from './transition'
 const Nav = createStackNavigator(
   {
     Search: { screen: Search },
@@ -12,12 +14,14 @@ const Nav = createStackNavigator(
     CustomerInfo: { screen: CustomerInfo },
     Service: { screen: Services },
     WaitingList: {screen : WaitingList},
-    ThankYou: {screen : ThankYou}
+    ThankYou: {screen : ThankYou},
+    SendGiftCard : {screen : SendGiftCard}
   },
   { 
     initialRouteName: "WaitingList",
     headerMode : 'none',
-    navigationOptions: {} 
+    navigationOptions: {},
+    // transitionConfig : transition
   }
 );
 

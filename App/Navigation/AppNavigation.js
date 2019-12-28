@@ -1,9 +1,10 @@
-import {  createAppContainer,createStackNavigator } from "react-navigation";
+import {  createAppContainer,createStackNavigator,createSwitchNavigator, } from "react-navigation";
 import SignIn from './SignInNavigtion';
 import Waiting from './WaitingNavigation'
 import FirstTime from './FirstScreenNavigation'
+import transition from './transition'
 // Manifest of possible screens
-const PrimaryNav = createStackNavigator(
+const PrimaryNav = createSwitchNavigator(
   {
     SignIn : {screen : SignIn},
     Waiting : {screen : Waiting},
@@ -13,6 +14,7 @@ const PrimaryNav = createStackNavigator(
     initialRouteName: "FirstTime",
     headerMode : 'none',
     navigationOptions: {},
+    transitionConfig : transition
   }
 );
 

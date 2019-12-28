@@ -39,6 +39,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* HpSignInTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HpSignInTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		3D016B78959E460AB9953B54 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 680FB740FF0C4109B3333609 /* FontAwesome5_Brands.ttf */; };
+		3D02010B239102A500EADE4A /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D02010A239102A500EADE4A /* welcome.jpg */; };
 		3D03078E232A430400FEFD14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		3D03078F232A430400FEFD14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3D030791232A430400FEFD14 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
@@ -56,7 +57,6 @@
 		3D03079D232A430400FEFD14 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
 		3D03079E232A430400FEFD14 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC780C50FC4E979837A76C /* libRNGestureHandler.a */; };
 		3D03079F232A430400FEFD14 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA9A9E19EC740EE8504CC7A /* libRNVectorIcons.a */; };
-		3D0307A0232A430400FEFD14 /* libPods-HpSignIn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7969806E5712587A9B139878 /* libPods-HpSignIn.a */; };
 		3D0307A2232A430400FEFD14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		3D0307A3232A430400FEFD14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		3D0307A4232A430400FEFD14 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 435873EDF70E4E9292FDBAEF /* AntDesign.ttf */; };
@@ -74,6 +74,8 @@
 		3D0307B0232A430400FEFD14 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C384601490D4CFEA5947C80 /* Octicons.ttf */; };
 		3D0307B1232A430400FEFD14 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7B87B396C654A1A9C0034E1 /* SimpleLineIcons.ttf */; };
 		3D0307B2232A430400FEFD14 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19756BE6BD4C4F4BB6BF36D2 /* Zocial.ttf */; };
+		3D8EC0F62363C3A4002B9E0C /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8EC0C82363C37B002B9E0C /* libCodePush.a */; };
+		3D8EC0F82363C3C5002B9E0C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8EC0F72363C3C5002B9E0C /* libz.tbd */; };
 		3F37A7475FBF4B70A2C1582A /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C33C28C4DBB9430283114C39 /* Ionicons.ttf */; };
 		492FB05C73CC4B0BA0D712AE /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19756BE6BD4C4F4BB6BF36D2 /* Zocial.ttf */; };
 		5AFDCA842F6E4F27BCA38C9F /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F3E2FDDF1E449CB5E5DE13 /* FontAwesome.ttf */; };
@@ -84,6 +86,7 @@
 		928022C99EC143078716F781 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 492A692955D04DE0B306F9BE /* Foundation.ttf */; };
 		9A7ABBC40C774901B6DF7DF4 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6772E28207D94B39AB1E3E9E /* Feather.ttf */; };
 		A26B5B0A8DAC49D1A123AF90 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA9A9E19EC740EE8504CC7A /* libRNVectorIcons.a */; };
+		A5DC4391A0DA64E2BCE95100 /* libPods-HpSignIn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7969806E5712587A9B139878 /* libPods-HpSignIn.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		B56C1340E365447B8409B969 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 435873EDF70E4E9292FDBAEF /* AntDesign.ttf */; };
 		B6BAE2D9A07547DAA17FC898 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC780C50FC4E979837A76C /* libRNGestureHandler.a */; };
@@ -244,6 +247,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3D05745F1DE6004600184BB4;
 			remoteInfo = "RCTPushNotification-tvOS";
+		};
+		3D8EC0C72363C37B002B9E0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D8EC0C22363C37A002B9E0C /* CodePush.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = CodePush;
+		};
+		3D8EC0C92363C37B002B9E0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D8EC0C22363C37A002B9E0C /* CodePush.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F886647B1F4ADB500036D01B;
+			remoteInfo = "CodePush-tvOS";
 		};
 		3DAD3E831DF850E9000B6D8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -425,6 +442,7 @@
 		00E356EE1AD99517003FC87E /* HpSignInTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HpSignInTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* HpSignInTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HpSignInTests.m; sourceTree = "<group>"; };
+		0E16FDD8E416A296D4F6AF61 /* Pods-HpSignIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HpSignIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HpSignIn/Pods-HpSignIn.debug.xcconfig"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* HpSignIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HpSignIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -437,21 +455,22 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		19187A897A0947E78381BBA9 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; };
 		19756BE6BD4C4F4BB6BF36D2 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
-		21739125322BCF33E954D72D /* Pods-HpSignIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HpSignIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-HpSignIn/Pods-HpSignIn.release.xcconfig"; sourceTree = "<group>"; };
 		238B0771070948418DDEB149 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* HpSignIn-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HpSignIn-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* HpSignIn-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HpSignIn-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA9A9E19EC740EE8504CC7A /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
+		3D02010A239102A500EADE4A /* welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = welcome.jpg; path = ../App/Images/welcome.jpg; sourceTree = "<group>"; };
 		3D0307B9232A430400FEFD14 /* HpSignIn copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HpSignIn copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0307E5232A430600FEFD14 /* HpSignIn copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HpSignIn copy-Info.plist"; path = "/Users/nam/PROJECT/HpSignIn_Vertical/ios/HpSignIn copy-Info.plist"; sourceTree = "<absolute>"; };
 		3D8258FD231BFCAD009E223D /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
+		3D8EC0C22363C37A002B9E0C /* CodePush.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; };
+		3D8EC0F72363C3C5002B9E0C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		40F3E2FDDF1E449CB5E5DE13 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		435873EDF70E4E9292FDBAEF /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		47AF87682B9B4766863F2DE5 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		492A692955D04DE0B306F9BE /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		5657B04950834CBF9F7E5278 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
-		570916BC8B7C4D60DADB082A /* Pods-HpSignIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HpSignIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HpSignIn/Pods-HpSignIn.debug.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		6772E28207D94B39AB1E3E9E /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		680FB740FF0C4109B3333609 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
@@ -463,6 +482,7 @@
 		7969806E5712587A9B139878 /* libPods-HpSignIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HpSignIn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8F301FC3A03F4AFFBD83D76C /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		9196827A1E4224AE090798C8 /* Pods-HpSignIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HpSignIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-HpSignIn/Pods-HpSignIn.release.xcconfig"; sourceTree = "<group>"; };
 		9EFDEC67101D4E3384953498 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		A351C195475B4B1BBC62B66F /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -486,12 +506,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D8EC0F82363C3C5002B9E0C /* libz.tbd in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
+				3D8EC0F62363C3A4002B9E0C /* libCodePush.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
@@ -502,6 +524,7 @@
 				B6BAE2D9A07547DAA17FC898 /* libRNGestureHandler.a in Frameworks */,
 				A26B5B0A8DAC49D1A123AF90 /* libRNVectorIcons.a in Frameworks */,
 				B7FB9A291887DA6E412675CE /* libPods-HpSignIn.a in Frameworks */,
+				A5DC4391A0DA64E2BCE95100 /* libPods-HpSignIn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,7 +573,6 @@
 				3D03079D232A430400FEFD14 /* libRCTWebSocket.a in Frameworks */,
 				3D03079E232A430400FEFD14 /* libRNGestureHandler.a in Frameworks */,
 				3D03079F232A430400FEFD14 /* libRNVectorIcons.a in Frameworks */,
-				3D0307A0232A430400FEFD14 /* libPods-HpSignIn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +665,7 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				3D02010A239102A500EADE4A /* welcome.jpg */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -676,6 +699,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D8EC0F72363C3C5002B9E0C /* libz.tbd */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
@@ -689,6 +713,15 @@
 			children = (
 				3D82590F231BFCAD009E223D /* libRCTPushNotification.a */,
 				3D825911231BFCAD009E223D /* libRCTPushNotification-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D8EC0C32363C37A002B9E0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D8EC0C82363C37B002B9E0C /* libCodePush.a */,
+				3D8EC0CA2363C37B002B9E0C /* libCodePush.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -743,6 +776,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				3D8EC0C22363C37A002B9E0C /* CodePush.xcodeproj */,
 				3D8258FD231BFCAD009E223D /* RCTPushNotification.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -835,8 +869,8 @@
 		E7D244A1D357BE63EB017C3F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				570916BC8B7C4D60DADB082A /* Pods-HpSignIn.debug.xcconfig */,
-				21739125322BCF33E954D72D /* Pods-HpSignIn.release.xcconfig */,
+				0E16FDD8E416A296D4F6AF61 /* Pods-HpSignIn.debug.xcconfig */,
+				9196827A1E4224AE090798C8 /* Pods-HpSignIn.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -923,7 +957,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D0307B6232A430400FEFD14 /* Build configuration list for PBXNativeTarget "HpSignIn copy" */;
 			buildPhases = (
-				3D03078C232A430400FEFD14 /* [CP] Check Pods Manifest.lock */,
 				3D03078D232A430400FEFD14 /* Sources */,
 				3D030790232A430400FEFD14 /* Frameworks */,
 				3D0307A1232A430400FEFD14 /* Resources */,
@@ -985,6 +1018,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 3D8EC0C32363C37A002B9E0C /* Products */;
+					ProjectRef = 3D8EC0C22363C37A002B9E0C /* CodePush.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -1191,6 +1228,20 @@
 			remoteRef = 3D825910231BFCAD009E223D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		3D8EC0C82363C37B002B9E0C /* libCodePush.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCodePush.a;
+			remoteRef = 3D8EC0C72363C37B002B9E0C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3D8EC0CA2363C37B002B9E0C /* libCodePush.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCodePush.a;
+			remoteRef = 3D8EC0C92363C37B002B9E0C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1387,6 +1438,7 @@
 				3F37A7475FBF4B70A2C1582A /* Ionicons.ttf in Resources */,
 				04354C578F844E2FAF788E39 /* MaterialCommunityIcons.ttf in Resources */,
 				664E2C59F5B54D0FB69DE43C /* MaterialIcons.ttf in Resources */,
+				3D02010B239102A500EADE4A /* welcome.jpg in Resources */,
 				FF288093E97C41588D314931 /* Octicons.ttf in Resources */,
 				0B8094B2D20C4F7F8AE8E65F /* SimpleLineIcons.ttf in Resources */,
 				492FB05C73CC4B0BA0D712AE /* Zocial.ttf in Resources */,
@@ -1468,11 +1520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-			);
-			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
@@ -1485,35 +1533,13 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-			);
-			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 582badab6e2cf0963d3d0884b982158b347816d6 08c92895dd73ddd1535a5d48e8935926f243f05fa432ad6fb0f66e4290ee964f\n";
-		};
-		3D03078C232A430400FEFD14 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HpSignIn-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 		3D0307B3232A430400FEFD14 /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1534,11 +1560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-			);
-			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
@@ -1551,11 +1573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-			);
-			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
@@ -1720,7 +1738,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 570916BC8B7C4D60DADB082A /* Pods-HpSignIn.debug.xcconfig */;
+			baseConfigurationReference = 0E16FDD8E416A296D4F6AF61 /* Pods-HpSignIn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1728,7 +1746,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AP95TBLGP3;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
@@ -1741,7 +1759,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.signinapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.levinci.signinapp9889908;
 				PRODUCT_NAME = HpSignIn;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -1751,14 +1769,14 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21739125322BCF33E954D72D /* Pods-HpSignIn.release.xcconfig */;
+			baseConfigurationReference = 9196827A1E4224AE090798C8 /* Pods-HpSignIn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AP95TBLGP3;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
@@ -1771,7 +1789,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.signinapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.levinci.signinapp9889908;
 				PRODUCT_NAME = HpSignIn;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -1931,7 +1949,6 @@
 		};
 		3D0307B7232A430400FEFD14 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 570916BC8B7C4D60DADB082A /* Pods-HpSignIn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1962,7 +1979,6 @@
 		};
 		3D0307B8232A430400FEFD14 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21739125322BCF33E954D72D /* Pods-HpSignIn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

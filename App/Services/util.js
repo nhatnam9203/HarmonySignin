@@ -1,5 +1,26 @@
 
 import axios from 'axios'
+
+import { Dimensions } from 'react-native';
+
+const { width, height } = Dimensions.get('window');
+const [shortDimension, longDimension] = width < height ? [width, height] : [height, width];
+
+//Default guideline sizes are based on standard ~5" screen mobile device
+const guidelineBaseWidth = 350;
+const guidelineBaseHeight = 680;
+
+export const scale = size => shortDimension / guidelineBaseWidth * size;
+export const verticalScale = size => longDimension / guidelineBaseHeight * size;
+export const moderateScale = (size, factor = 0.5) => size + ( scale(size) - size ) * factor;
+
+
+export const validateEmail = (email) => {
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+
 export function pad(n, length) {
   var len = length - ('' + n).length;
   return (len > 0 ? new Array(++len).join('0') : '') + n
@@ -80,6 +101,15 @@ export function convertMinsToHrsMins(mins) {
   if(h !== 0)
   return `${h} hour ${m} min`;
   return `${m} min`;
+}
+
+export function formatUsPhone(phone) {
+	phone = phone.replace(/\D/g, '');
+	const match = phone.match(/^(\d{1,3})(\d{0,3})(\d{0,4})$/);
+	if (match) {
+		phone = `${match[1]}${match[2] ? '-' : ''}${match[2]}${match[3] ? '-' : ''}${match[3]}`;
+	}
+	return phone;
 }
 
 

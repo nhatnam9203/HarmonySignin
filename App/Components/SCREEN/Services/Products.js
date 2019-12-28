@@ -75,7 +75,7 @@ export default class Manicure extends Component {
                 <View style={{ display: "flex", flexDirection: "row" }}>
                   <Text style={styles.itemBottom}>Price: </Text>
                   <Text style={[styles.itemBottom, { fontWeight: "700" }]}>
-                    $ {Number(item.price).toFixed(2)}
+                    $ {parseFloat(item.price).toFixed(2)}
                   </Text>
                 </View>
               </Item.Right.Bottom>
@@ -93,6 +93,7 @@ export default class Manicure extends Component {
     this.setState({ quantity: quantity + 1 });
     // plusQuantity({product : item,quantity})
   }
+  
   minusQuantity(item) {
     const { minusQuantity } = this.props;
     const { quantity } = this.state;

@@ -13,6 +13,7 @@ import {
 } from "react-native-responsive-screen";
 import PickerSelect from "react-native-picker-select";
 import Indicator from '../Indicator'
+import {formatUsPhone} from '../../Services/util'
 
 export default class Forgot extends Component {
   constructor(props) {
@@ -32,8 +33,9 @@ export default class Forgot extends Component {
   Submit() {
     const { searchByPhone } = this.props;
     const { phone, phoneHeader } = this.state;
+    const phoneTail = formatUsPhone(phone);
     if (phone.trim() !== "") {
-      searchByPhone(phoneHeader + phone);
+      searchByPhone(phoneHeader + phoneTail);
     }
   }
 
@@ -69,10 +71,11 @@ export default class Forgot extends Component {
                   ]}
                 />
                 <Phone
-                  value={this.state.phone}
+                  value={formatUsPhone(this.state.phone)}
                   onChangeText={phone => this.onChangePhone(phone)}
                   placeholderTextColor="#C4D3D2"
                   placeholder="Phone number"
+                  maxLength={12}
                 />
               </WrapPhone>
             </Container.Content>
